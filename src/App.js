@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
-import Map from './Map/Map'
-import Test from './test/test'
+import Map from './DistrictExplorerTest'
+import Test from './PositionPickerTest'
 
 class MapUIComponent extends Component {
   render() {

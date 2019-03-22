@@ -3,29 +3,7 @@ import { PositionPicker } from 'react-amapui-wrapper'
 
 class PositionPickerTest extends PositionPicker {
 
-  initialInstance() {
-    const { eventSupport=false } = this.props
-    if (this[this.instanceName]) {
-      return new Promise((resolve) => {
-        resolve(this[this.instanceName])
-      })
-    } else {
-      return new Promise((resolve) => {
-
-        this.amapui.load(['ui/misc/PositionPicker','lib/$'], (positionPicker,$) => {
-          
-          this.initPage(positionPicker,$)
-          const events = this.exposeInstance(this.props)
-          events && this.bindEvents(events)
-
-          resolve(this[this.instanceName])
-        })
-      })
-    }
-  }
-
   // render AllPage
-
   initPage(PositionPicker,$) {
     this[this.instanceName] = new PositionPicker({
       eventSupport: true,
